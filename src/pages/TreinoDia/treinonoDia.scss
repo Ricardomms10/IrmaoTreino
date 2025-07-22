@@ -1,0 +1,98 @@
+.treino-container {
+    max-width: 480px;
+    margin: 0 auto;
+    padding: 20px;
+
+    h1 {
+        text-align: center;
+        text-transform: uppercase;
+        margin-bottom: 20px;
+        color: brown;
+    }
+
+    .grupo-muscular {
+        background: #f8f8f8;
+        padding: 15px;
+        margin-bottom: 20px;
+        border-radius: 8px;
+
+        h2 {
+            margin-bottom: 10px;
+            color: #e53935;
+        }
+
+        ul {
+            list-style: none;
+            padding: 0;
+
+            .exercicio-item {
+                padding: 10px;
+                margin-bottom: 8px;
+                background: #fff;
+                border-radius: 5px;
+                cursor: pointer;
+                box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+                transition: background 0.2s;
+
+                &:hover {
+                    background: #f0f0f0;
+                }
+            }
+        }
+    }
+}
+
+.modal-overlay {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.6);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.modal-content {
+    background: #fff;
+    padding: 20px;
+    border-radius: 8px;
+    max-width: 90%;
+    text-align: center;
+
+    img {
+        max-width: 100%;
+        border-radius: 8px;
+        margin-bottom: 10px;
+    }
+
+    button {
+        margin-top: 10px;
+        padding: 10px 20px;
+        border: none;
+        background: #e53935;
+        color: white;
+        border-radius: 5px;
+        cursor: pointer;
+
+        &:hover {
+            background: #c62828;
+        }
+    }
+}
+
+.voltar-btn {
+    background: #e53935;
+    color: #fff;
+    border: none;
+    padding: 10px 15px;
+    margin-bottom: 15px;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 1rem;
+
+    &:hover {
+        background: #c62828;
+    }
+}
