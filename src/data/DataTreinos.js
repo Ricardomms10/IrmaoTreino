@@ -1,86 +1,105 @@
 const DataTreinos = {
   segunda: {
     Peito: [
-      { nome: "Supino reto com barra — 4x10-12", imagem: require("../assets/SupinoBarraReta.gif") },
-      { nome: "Supino inclinado com halteres — 4x10-12", imagem: require("../assets/supino_reto.gif") },
-      { nome: "Crucifixo com halteres — 3x12-15", imagem: require("../assets/crucifixo.gif") },
-      { nome: "Crossover no cabo — 3x12-15", imagem: require("../assets/crossover.gif") }
+      { nome: "Supino máquina ou halteres" },
+      { nome: "Supino inclinado máquina" },
+      { nome: "Peck deck / Crucifixo máquina" }
+    ],
+    Ombro: [
+      { nome: "Desenvolvimento máquina" },
+      { nome: "Elevação lateral" }
     ],
     Tríceps: [
-      { nome: "Tríceps na polia (pushdown) — 4x12-15", imagem: require("../assets/triceps_polia.gif") }
+      { nome: "Tríceps pulley" },
+      { nome: "Tríceps banco ou corda" }
+    ],
+    Cardio: [
+      { nome: "Caminhada ou bicicleta — 20 a 30 min" }
     ]
   },
+
   terca: {
-    Quadríceps: [
-      { nome: "Agachamento livre — 4x10-12", imagem: require("../assets/agachamento.webp") },
-      { nome: "Leg press — 4x10-12", imagem: require("../assets/leg_press.gif") },
-      { nome: "Cadeira extensora — 3x12-15", imagem: require("../assets/cadeira_extensora.webp") }
+    Costas: [
+      { nome: "Puxada frente" },
+      { nome: "Remada baixa" },
+      { nome: "Remada máquina" },
+      { nome: "Pullover máquina" }
     ],
-    Posterior: [
-      { nome: "Stiff com barra ou halteres — 4x10-12", imagem: require("../assets/stiff.gif") },
-      { nome: "Mesa flexora — 3x12-15", imagem: require("../assets/mesa_flexora.gif") }
+    Bíceps: [
+      { nome: "Rosca direta" },
+      { nome: "Rosca alternada" }
     ],
-    Panturrilha: [
-      { nome: "Elevação de panturrilha em pé — 4x15-20", imagem: require("../assets/panturrilha.gif") }
+    Abdômen: [
+      { nome: "Abdominal máquina ou no banco" }
     ],
-    Glúteos: [
-      { nome: "Glúteo no cabo (kickback) ou hip thrust — 4x12-15", imagem: require("../assets/gluteo.gif") }
+    Cardio: [
+      { nome: "Elíptico ou esteira — 20 a 30 min" }
     ]
   },
 
   quarta: {
-    Costas: [
-      { nome: "Puxador frente — 4x10-12", imagem: require("../assets/puxada_fixa.gif") },
-      { nome: "Remada curvada com barra ou halteres — 4x10-12", imagem: require("../assets/remada_curvada.gif") },
-      { nome: "Remada baixa na máquina ou cabo — 3x12-15", imagem: require("../assets/remada_baixa.gif") },
-      { nome: "Pullover no cabo ou halteres — 3x12-15", imagem: require("../assets/pullover.gif") }
+    Pernas: [
+      { nome: "Leg press" },
+      { nome: "Mesa flexora" },
+      { nome: "Cadeira extensora" },
+      { nome: "Agachamento no banco ou Smith" },
+      { nome: "Elevação de quadril" }
     ],
-    Bíceps: [
-      { nome: "Rosca direta com barra — 4x10-12", imagem: require("../assets/rosca_direta.gif") }
+    Panturrilha: [
+      { nome: "Panturrilha sentado ou no leg press" }
     ],
-    Trapézio: [
-      { nome: "Encolhimento de ombros com halteres — 4x12-15", imagem: require("../assets/encolhimento.gif") }
+    Cardio: [
+      { nome: "Bicicleta ergométrica — 20 a 30 min" }
     ]
   },
 
   quinta: {
     Descanso: [
-      { nome: "Dia de descanso", imagem: require("../assets/descansinho.webp") }
+      { nome: "Dia de descanso (opcional alongamento ou caminhada leve)" }
     ]
   },
 
   sexta: {
     Peito: [
-      { nome: "Supino reto com barra ou halteres — 4x10-12", imagem: require("../assets/supino_reto.gif") }
+      { nome: "Supino reto máquina" },
+      { nome: "Crucifixo máquina" }
     ],
     Ombro: [
-      { nome: "Desenvolvimento com halteres ou barra — 4x10-12", imagem: require("../assets/desenvolvimento.gif") },
-      { nome: "Elevação lateral — 4x12-15", imagem: require("../assets/elevacao_lateral.gif") },
-      { nome: "Elevação frontal — 3x12-15", imagem: require("../assets/elevacao_frontal.gif") },
-      { nome: "Elevação posterior no peck-deck ou com halteres — 3x12-15", imagem: require("../assets/elevacao_posterior.gif") }
+      { nome: "Desenvolvimento máquina" },
+      { nome: "Elevação lateral" },
+      { nome: "Elevação frontal" }
     ],
-    Trapézio: [
-      { nome: "Encolhimento de ombros — 4x12-15", imagem: require("../assets/encolhimentoB.gif")}
+    Tríceps: [
+      { nome: "Tríceps corda" }
+    ],
+    Cardio: [
+      { nome: "Cardio — 25 a 35 min" }
     ]
   },
 
   sabado: {
-    Bíceps: [
-      { nome: "Rosca direta com barra — 4x10-12", imagem: require("../assets/rosca_direta.gif") },
-      { nome: "Rosca martelo — 4x12-15", imagem: require("../assets/rosca_martelo.gif") },
-      { nome: "Rosca Scott — 3x12-15", imagem: require("../assets/Rosca_Scott.gif") }
+    Costas: [
+      { nome: "Puxada frente" },
+      { nome: "Remada baixa" },
+      { nome: "Remada unilateral máquina" }
+    ],
+    Ombro: [
+      { nome: "Elevação lateral" }
     ],
     Tríceps: [
-      { nome: "Tríceps na polia (pushdown) — 4x12-15", imagem: require("../assets/triceps_polia.gif") },
-      { nome: "Tríceps coice na polia — 4x10-12", imagem: require("../assets/coice_polia.gif") },
-      { nome: "Tríceps unilateral na polia — 3x12-15", imagem: require("../assets/unilateral.gif") }
-
+      { nome: "Tríceps pulley" }
+    ],
+    Abdômen: [
+      { nome: "Abdominal máquina ou prancha" }
+    ],
+    Cardio: [
+      { nome: "Cardio leve — 20 a 30 min" }
     ]
   },
 
   domingo: {
     Descanso: [
-      { nome: "Dia de descanso", imagem: require("../assets/descansinho.webp") }
+      { nome: "Descanso total" }
     ]
   }
 };
