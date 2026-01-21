@@ -38,7 +38,9 @@ export default function TreinoDia() {
             {selectedExercicio && (
                 <div className="modal-overlay" onClick={() => setSelectedExercicio(null)}>
                     <div className="modal-content" onClick={(e) => e.stopPropagation()}>
-                        <img src={selectedExercicio.imagem} alt={selectedExercicio.nome} />
+                        {selectedExercicio.image && (
+                            <img src={selectedExercicio.image} alt={selectedExercicio.nome} />
+                        )}
                         <h3>{selectedExercicio.nome}</h3>
                         <button onClick={() => setSelectedExercicio(null)}>Fechar</button>
                     </div>
