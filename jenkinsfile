@@ -3,9 +3,9 @@ pipeline {
 
     stages {
 
-        stage('Clonar repositório') {
+        stage('Clonar código') {
             steps {
-                git 'SEU_REPO_GITHUB'
+                checkout scm
             }
         }
 
@@ -15,7 +15,7 @@ pipeline {
             }
         }
 
-        stage('Rodar container') {
+        stage('Subir container') {
             steps {
                 sh 'docker stop irmaotreino || true'
                 sh 'docker rm irmaotreino || true'
