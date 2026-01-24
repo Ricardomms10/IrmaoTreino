@@ -13,7 +13,7 @@ pipeline {
             steps {
                 sh 'docker build -t irmaotreino .'
             }
-        }
+        } 
 
         stage('Subir container') {
             steps {
