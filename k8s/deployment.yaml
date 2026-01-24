@@ -3,7 +3,6 @@ kind: Deployment
 metadata:
   name: treino-deployment
 spec:
-  replicas: 2
   selector:
     matchLabels:
       app: treino
@@ -14,8 +13,8 @@ spec:
     spec:
       containers:
       - name: treino
-        image: ricardomms/treino:v2
-        imagePullPolicy: Never
+        image: ricardomms10/irmao-treino:v1
+        imagePullPolicy: IfNotPresent
         ports:
         - containerPort: 8080
 
