@@ -9,7 +9,7 @@ pipeline {
 
         stage('Clonar repositório') {
             steps {
-                git 'https://github.com/Ricardomms10/IrmaoTreino.git'
+                git 'https://github.com/Ricardomms10/IrmaoTreino'
             }
         }
 
