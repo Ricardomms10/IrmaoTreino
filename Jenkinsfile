@@ -1,25 +1,39 @@
 pipeline {
     agent any
 
+    environment {
+        DOCKER_IMAGE = "irmaotreino-app"
+    }
+
     stages {
 
-        stage('Clonar código') {
+        stage('Clonar repositório') {
             steps {
-                checkout scm
+                git 'https://github.com/Ricardomms10/IrmaoTreino'
             }
         }
 
-        stage('Build Docker') {
+        stage('Instalar dependências') {
             steps {
-                sh 'docker build -t irmaotreino .'
+                sh 'npm install'
             }
-        } 
+        }
 
-        stage('Subir container') {
+        stage('Build da aplicação') {
             steps {
-                sh 'docker stop irmaotreino || true'
-                sh 'docker rm irmaotreino || true'
-                sh 'docker run -d -p 3000:3000 --name irmaotreino irmaotreino'
+                sh 'npm run build'
+            }
+        }
+
+        stage('Criar imagem Docker') {
+            steps {
+                sh 'docker build -t $DOCKER_IMAGE .'
+            }
+        }
+
+        stage('Listar imagem criada') {
+            steps {
+                sh 'docker images'
             }
         }
     }
