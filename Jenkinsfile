@@ -1,7 +1,7 @@
 pipeline {
     agent {
         docker {
-            image 'node:18-alpine'
+            image 'node:18'
             args '-u root:root'
         }
     }
@@ -20,7 +20,7 @@ pipeline {
             }
         }
 
-        stage('Build React') {
+        stage('Build') {
             steps {
                 sh 'npm run build'
             }
