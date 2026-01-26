@@ -1,36 +1,19 @@
 apiVersion: apps/v1
 kind: Deployment
 metadata:
-  name: treino-deployment
+  name: irmao-treino
 spec:
+  replicas: 1
   selector:
     matchLabels:
-      app: treino
+      app: irmao-treino
   template:
     metadata:
       labels:
-        app: treino
+        app: irmao-treino
     spec:
       containers:
-      - name: treino
-        image: ricardomms10/irmao-treino:v1
-        imagePullPolicy: IfNotPresent
+      - name: irmao-treino
+        image: ricardomms/irmaotreino:latest
         ports:
-        - containerPort: 8080
-
----
-
-apiVersion: v1
-kind: Service
-metadata:
-  name: treino-service
-spec:
-  type: NodePort
-  selector:
-    app: treino
-  ports:
-  - name: http
-    protocol: TCP
-    port: 80
-    targetPort: 8080
-    nodePort: 30000
+        - containerPort: 80

@@ -1,10 +1,13 @@
-FROM jenkins/jenkins:lts
+# build da aplicação
+FROM node:18-alpine as build
 
-USER root
+WORKDIR /app
+COPY package*.json ./
+RUN npm install
+COPY . .
+RUN npm run build
 
-# instala docker cli + git
-RUN apt-get update && \
-    apt-get install -y docker.io git && \
-    apt-get clean
-
-USER jenkins
+# imagem final leve com nginx
+FROM nginx:alpine
+COPY --from=build /app/build /usr/share/nginx/html
+EXPOSE 80
