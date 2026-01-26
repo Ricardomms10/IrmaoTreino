@@ -1,27 +1,25 @@
 pipeline {
-    agent {
-        docker {
-            image 'node:18'
-            args '-u root:root'
-        }
-    }
+    agent any   // 👈 Jenkins normal primeiro
 
     stages {
 
-        stage('Clonar código') {
+        stage('Checkout do código') {
             steps {
                 git branch: 'main', url: 'https://github.com/Ricardomms10/IrmaoTreino.git'
+                sh 'ls -la'   // 👈 PROVA que o código veio
             }
         }
 
-        stage('Instalar dependências') {
+        stage('Build React') {
+            agent {
+                docker {
+                    image 'node:18-alpine'
+                    args '-u root:root'
+                }
+            }
             steps {
+                sh 'ls -la'   // 👈 TEM que aparecer package.json
                 sh 'npm install'
-            }
-        }
-
-        stage('Build') {
-            steps {
                 sh 'npm run build'
             }
         }
