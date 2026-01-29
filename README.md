@@ -1,70 +1,101 @@
-# Getting Started with Create React App
+# 🚀 Irmão Treino — Docker Monitoring Stack
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+Aplicação React containerizada com monitoramento de containers em tempo real utilizando Prometheus, Grafana e cAdvisor.
 
-## Available Scripts
+Este projeto demonstra na prática conceitos de DevOps, Observabilidade e Infraestrutura com Docker.
 
-In the project directory, you can run:
+## 🧠 Arquitetura
+Usuário → Aplicação React (Docker)
+                    ↓
+               cAdvisor
+                    ↓
+               Prometheus
+                    ↓
+                 Grafana
 
-### `npm start`
+## 🐳 Tecnologias Utilizadas
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
+Docker — Containerização da aplicação
 
-The page will reload when you make changes.\
-You may also see any lint errors in the console.
+Docker Compose — Orquestração dos serviços
 
-### `npm test`
+cAdvisor — Coleta de métricas dos containers
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+Prometheus — Armazenamento de métricas
 
-### `npm run build`
+Grafana — Visualização e dashboards
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
+Linux (WSL) — Ambiente de execução
 
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
+## 📦 Serviços da Stack
+Serviço	Função
+App (React)	Aplicação web
+cAdvisor	Monitora CPU, RAM e recursos dos containers
+Prometheus	Coleta e armazena métricas
+Grafana	Exibe dashboards de monitoramento
+▶️ Como executar o projeto
+docker compose up -d
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+🌐 Acessos
+Serviço	URL
+Aplicação	http://localhost:3000
 
-### `npm run eject`
+Prometheus	http://localhost:9090
 
-**Note: this is a one-way operation. Once you `eject`, you can't go back!**
+Grafana	http://localhost:3001
 
-If you aren't satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
+cAdvisor	http://localhost:8080
+🔐 Login do Grafana
+Usuário: admin
+Senha: admin
 
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you're on your own.
+📊 Métricas Monitoradas
 
-You don't have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn't feel obligated to use this feature. However we understand that this tool wouldn't be useful if you couldn't customize it when you are ready for it.
+Uso de CPU dos containers
 
-## Learn More
+Uso de Memória (RAM)
 
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
+Consumo de recursos da aplicação
 
-To learn React, check out the [React documentation](https://reactjs.org/).
+Estatísticas de containers Docker
 
-### Code Splitting
+## 🎯 Objetivo do Projeto
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
+Demonstrar habilidades práticas em:
 
-### Analyzing the Bundle Size
+Containerização de aplicações
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
+Monitoramento de infraestrutura
 
-### Making a Progressive Web App
+Observabilidade de containers
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
+Integração de ferramentas DevOps
 
-### Advanced Configuration
+Arquitetura de ambientes monitorados
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
+### 🧩 Estrutura de Pastas
+irmao-treino-devops/
+│
+├── app/                  # Aplicação React
+├── Dockerfile
+├── docker-compose.yml
+├── monitoring/
+│   └── prometheus.yml
+└── README.md
 
-### Deployment
+## 💼 Contexto Profissional
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
+Este projeto simula um ambiente de produção onde aplicações são:
 
-### `npm run build` fails to minify
+Containerizadas
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
+Monitoradas
+
+Observadas em tempo real
+
+Stack amplamente utilizada em ambientes corporativos e equipes DevOps.
+
+### 👨‍💻 Autor
+
+Ricardo Martins
+Projeto para estudo e prática de DevOps & Observabilidade 🚀
