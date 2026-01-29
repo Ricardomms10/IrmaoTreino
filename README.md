@@ -99,3 +99,6 @@ Stack amplamente utilizada em ambientes corporativos e equipes DevOps.
 
 Ricardo Martins
 Projeto para estudo e prática de DevOps & Observabilidade 🚀
+
+![Dashboard](./src/assets/Obs.png)
+![Dashboard](./src/assets/oob.png)
